@@ -1,0 +1,38 @@
+.title_text {
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 2.5vh;
+    margin-left: 4.5vw;
+    vertical-align: middle;
+    transform: translate(0, -8vh);
+}
+
+.input_text {
+    background-color: white;
+    margin-top: 3vh;
+    margin-right: 1vw;
+    border-radius: 10px;
+    height: 50vh;
+    font-weight: bold;
+    text-align: center;
+    padding: 2.5vh;
+    vertical-align: middle;
+    transform: translate(8vw, -5vh);
+    width: 65vw;
+    text-align: left;
+    border: 2px solid black;
+    position: fixed;
+}
+
+.submit {
+    position: fixed;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #da7509;
+    z-index: 1000;
+    padding: 15px;
+    transform: translate(40vw, 55vh)
+}

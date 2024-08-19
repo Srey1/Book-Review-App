@@ -1,0 +1,27 @@
+<!-- HTML Page for Login -->
+{% extends "layout.html"%}
+{% block title %}
+<title>Book Reviews</title>
+<link rel="stylesheet" href="static/styles/login.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <form class = "login-form" action = "./" method = "POST">
+        <div class="login-form__login-container"> 
+            <img class = "login-form__logo" src = "/static/Blue Simple Modern Square Logo Design.png", alt = "Book Ratings Logo">
+        </div>
+
+        <div class = "login-context">
+            <div class="login-header"> <h2><b>Login to your account</b></h2></div>
+
+                <input class="login-input" type="text" name="username" placeholder="Email">
+                <input class="login-input" type="password" name="password" placeholder="Password">
+                <button type="submit" class="login-button">Login</button>
+
+            <p> </p>
+            <a href= "{{ url_for('signup') }}" class = "text">Sign up!</a>
+        </div>
+
+
+    </form>
+{% endblock %}

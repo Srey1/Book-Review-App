@@ -1,0 +1,55 @@
+<!-- HTML Page to Add a Book Review -->
+{% extends "sidebar_temp.html"%}
+{% block title %}
+<title>Book Reviews</title>
+<link rel="stylesheet" href="static/styles/sidebar.css" type="text/css">
+<link rel="stylesheet" href="static/styles/addBook.css" type="text/css">
+<script src="https://kit.fontawesome.com/97d124f6e5.js" crossorigin="anonymous"></script>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="pic">
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <form class = "form" action = "./addBook" method = "POST" enctype="multipart/form-data" autocomplete="off">
+        <div class = "container">
+            <!-- <ion-icon name="image-outline" class = "icon"></ion-icon> -->
+            <img src="static/images/image_pic.png" class = "icon">
+            <input id = "filee" type="file" name = "file" required> 
+            <label for="filee" class = "upload">Upload Photo</label>
+        </div>
+        <div class="info">  
+            <input type = "text" name = "title" class = "text" placeholder = "Book Title(Required):" required>
+            <div>
+                <div class = "left"><h3 id = "rateTag">Rate the Book!</h3></div>
+                <div class="right">
+                    <fieldset class="rate">
+                        <input type="radio" id="star1" name="rating" value="5" required/>
+                        <label for="star1"></label>
+                        <input type="radio" id="star2" name="rating" value="4" />
+                        <label for="star2"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3"></label>
+                        <input type="radio" id="star4" name="rating" value="2" />
+                        <label for="star4"></label>
+                        <input type="radio" id="star5" name="rating" value="1" />
+                        <label for="star5"></label>
+                    </fieldset> 
+                </div>
+            </div>
+            <input type = "text" class = "elements" name = "author" placeholder = "Auther Name(Required): " required>
+            <input type = "text" class = "elements" name = "genre" placeholder = "Genre(Optional): ">
+            <input type = "text" class = "elements" name = "pages" placeholder = "Number of Pages(Optional): ">
+            <input type = "text" class = "elements" name = "grade" placeholder = "Suggested Grade Level(Optional): ">
+            <textarea row = 4 column = 10 class = "elements" name = "description" id = "description" placeholder = "Description/Review(Optional): "></textarea>
+            <button type="submit" class="upload" id = "upload">Submit</button>   
+        </div>
+        
+    </form>
+</div>
+
+<script src="static/js/add.js"></script>
+    
+{% endblock %}

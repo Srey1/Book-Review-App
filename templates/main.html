@@ -1,0 +1,56 @@
+<!-- HTML Page for the Homepage - Book Grid Display -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book Reviews</title>
+    <link rel="stylesheet" href="static/styles/work.css" type="text/css">
+    <link rel="stylesheet" href="static/styles/sidebar.css" type="text/css">
+    <link rel = "shortcut icon" type="image/png" href = "static/images/favicon.png">
+
+</head>
+<body class = "body">
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <div class="sidebar">
+        <div class = "down">
+            <ion-icon name="book-outline" class="logo"></ion-icon>
+            <h2>Book Reviews</h2>
+        </div>
+
+        <div class="links">
+            <a href="{{ url_for('main') }}">Home</a>
+            <a href="{{ url_for('history') }}">View History</a>
+            <a href="{{ url_for('statistics') }}">Statistics</a>
+            <form action="./main" method = "POST">
+                <button type = "submit" name = "chosen" value = "sort" class = "sort">Sort by Rating</button>
+            </form>
+            
+            <a href="{{ url_for('logout') }}">Logout</a>
+          </div>
+    </div>
+
+
+    <div class="search">
+        <form action="./main" method = "POST">
+            <input type="text" autocomplete = "off" placeholder="Search.." name="search" class = "bar">
+            <button type="submit" class = "dosearch" name = "chosen" value = "search"><ion-icon name="search-sharp"></ion-icon></button>
+        </form>
+    </div>
+
+    <form class = "images" action = "./main" method = "POST" name = "form1" value = "form2">
+        <div class="grid">
+            {% for item in range(0, length) %}
+            <button type="submit" class = "button_white" name="chosen" value = "{{id[item]}}">
+                <img src = "{{pictures[item]}}" class = "size">
+                <p>{{names[item]}}</p>
+            </button>
+        {% endfor %}
+        </div>
+    </form>
+
+    <div class = "add">
+        <a href = " {{ url_for('addBook') }}" class = "add_link"><ion-icon name="add-circle"></ion-icon></a>
+    </div>
+</body>
+</html>

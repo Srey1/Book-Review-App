@@ -1,0 +1,40 @@
+<!-- HTML Page for Admin Account -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="static/styles/admin.css" type="text/css">
+    <title> Book Reviews Admin </title>
+    <link rel = "shortcut icon" type="image/png" href = "static/images/favicon.png">
+    
+</head>
+<body class = "body">
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <div class="sidebar">
+        <div class = "down">
+            <ion-icon name="book-outline" class="logo"></ion-icon>
+            <h2>Book Reviews</h2>
+        </div>
+
+        <div class="links">
+            <a href="{{ url_for('logout') }}">Logout</a>
+          </div>
+    </div>
+
+    <div class="all">
+        {% for item in range(0, length) %}
+        <div class="one">
+            <img src = "{{pictures[item]}}" class = "size">
+            <p class = "info">Title: {{titles[item]}}</p>
+            <p class = "info">Your Rating: {{ratings[item]}} Stars</p>
+            <form method = "POST" action = "./admin" class = "the_form">
+                <button class="button_style" value = "{{ids[item]}}" name = "id">
+                    DELETE
+                </button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

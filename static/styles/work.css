@@ -1,0 +1,139 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+ 
+.add {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 80px;
+    padding-right: 15px;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: black;
+    z-index: 1000;
+}
+
+.sort{
+    padding: 12px 10px 12px 16px !important;
+    margin-right: 10px;
+    width: 215px;
+    text-align: left;
+    align-items: center;
+    margin-top: 18px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: 'Edu SA Beginner', cursive;
+    border-radius: 8px;
+    border-color: red;
+    border-bottom: 3px;
+    transition: .5s;
+    border: none;
+    background-color: black;
+    
+}
+
+.sort:hover {
+    background-color: #da7509;
+}
+
+.add_link {
+    text-decoration: none;
+    color: black;
+}
+
+.search input[type=text]{
+    border-radius: 8px;
+    padding: 15px;
+    border: 2px solid black;
+    width: 60%;
+    outline: none;
+    font-weight: bold;
+    font-size: medium;
+}
+
+input[type=text]:focus {
+    border-color: #da7509;
+}
+
+
+.dosearch {
+    padding: 5px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-style: bold;
+    width: 80px;
+    background-color: #da7509;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 6px;
+    align-items: center;
+    background-position: center;
+    transform: translate(0, 15%);
+    
+    
+}
+
+.search{
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    height: 40px; 
+}
+
+.grid {
+    margin-top: 40px;
+    margin-left: 2vw;
+    height: 100vh;
+    width: 75vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    grid-gap: 2rem; 
+    /* grid-template-rows: 0px 1fr; */
+    grid-template-rows: max-content;
+    white-space: normal;
+    grid-auto-flow: row;
+    row-gap: 20px;
+    overflow-y: scroll;
+} 
+
+.check {
+    height: 100%;
+    width: 100%;
+}
+
+.button_white {
+    background-color: #009578;
+    border: none;
+    cursor: pointer;
+    padding: 20px 20px;
+    font-weight: bold;
+    height: 43vh;
+}
+.size {
+    height: 35vh;
+    width: 14vw;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.images {
+    display: flex;
+}
+
+.outer {
+    display: block;
+}
+
+.inner {
+    display: inline-block;
+    padding: right
+}

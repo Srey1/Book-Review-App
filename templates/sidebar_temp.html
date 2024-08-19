@@ -1,0 +1,34 @@
+<!-- Standard HTML Page for Sidebar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="static/styles/sidebar.css" type="text/css">
+    <link rel = "shortcut icon" type="image/png" href = "static/images/favicon.png">
+    {% block title %} 
+
+    {% endblock %}
+
+</head>
+<body class = "body">
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <a href=" {{ url_for('main') }}" class = "back_position"><ion-icon class = "back" name="arrow-back-circle-sharp"></ion-icon></a>
+    <div class="sidebar">
+        <div class = "down">
+            <ion-icon name="book-outline" class="logo"></ion-icon>
+            <h2>Book Reviews</h2>
+        </div>
+
+        <div class="links">
+            <a href="{{ url_for('main') }}">Home</a>
+            <a href="{{ url_for('history') }}">View History</a>
+            <a href="{{ url_for('statistics') }}">Statistics</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+          </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- HTML Page for Users to See their Statistics -->
+{% extends "sidebar_temp.html"%}
+{% block title %}
+<title>Book Reviews</title>
+<link rel="stylesheet" href="static/styles/sidebar.css" type="text/css">
+<link rel="stylesheet" href="static/styles/statistics.css" type="text/css">
+
+{% endblock %}
+ 
+{% block content %}
+
+<p class = "title_text">Statistics</p>
+<p class = "normal_info">Books Reviewed: {{ books_reviewed }}</p>
+<p class = "normal_info">Pages Read: {{ pages_read }}</p>
+<p class = "normal_info">Average Rating Given: {{ average_rating }}</p>
+<p class = "normal_info">Likes Given: {{ likes_given }}</p>
+<p class = "normal_info">Likes Recieved: {{ likes_recieved }}</p>
+<p class = "normal_info">Different Genres Read: {{ genres }}</p>
+<p class = "normal_info">Different Authors Read: {{ authors }}</p>
+
+
+{% endblock %}

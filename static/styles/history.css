@@ -1,0 +1,53 @@
+.one {
+    background-color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 2px solid black;
+    width: 80vw;
+    height: 15vh;
+    padding: 1vw;
+    text-align: center;
+    font-size: 1.15rem;
+    display: inline-block;
+    margin-top: 4vh;
+    position: relative;
+}
+
+.size {
+    width: 6vw;
+    height: 14vh;
+    float: left;
+    padding-right: 2vw;
+}
+
+.all {
+    display: block;
+}
+
+.info {
+    text-align: left;
+    font-size: 1.5rem;
+    padding-right: 2vw !important;
+}
+
+.button_style {
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    height: 100%; 
+    padding-left: 2vw;
+    padding-right: 2vw;
+    cursor: pointer;
+}
+
+.the_form {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 88%;
+    float: right;
+    height: 8vh;
+}

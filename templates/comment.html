@@ -1,0 +1,18 @@
+<!-- HTML Page for a User to Create a Comment -->
+{% extends "sidebar_temp.html"%}
+{% block title %}
+<title>Book Reviews</title>
+<link rel="stylesheet" href="static/styles/sidebar.css" type="text/css">
+<link rel="stylesheet" href="static/styles/comment.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+<p class = "title_text">Comment</p>
+
+<form action = "./comment" name = "form" value = "form1" method = "POST">
+    <div>
+        <textarea rows="20" cols="50" class = "input_text" type="text" autocomplete = "off" name="comment1" placeholder="Enter Comment"></textarea>
+        <button type="submit" class = "submit" name = "book_id" value = "{{id}}">Submit</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+.title_text {
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 2.5vh;
+    margin-left: 4.5vw;
+    vertical-align: middle;
+    transform: translate(0, -8vh);
+}
+
+.normal_info {
+    background-color: white;
+    margin-top: 3vh;
+    margin-right: 1vw;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 2.5vh;
+    vertical-align: middle;
+    transform: translate(0, -5vh);
+    background-color: lightblue;
+}

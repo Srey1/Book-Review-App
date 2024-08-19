@@ -1,0 +1,81 @@
+<!-- HTML Page to Display the Book Information for a Book -->
+{% extends "sidebar_temp.html"%}
+{% block title %}
+<title>Book Reviews</title>
+<link rel="stylesheet" href="static/styles/sidebar.css" type="text/css">
+<link rel="stylesheet" href="static/styles/book_info.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<div class = "content">
+    <div class = "general">
+        <div>
+            <img src="{{ image }}" class = "image">
+        </div>
+        <div>
+            <p class = "normal_text"> Reviewer:  {{person}}</p>   
+        </div>
+        <div>
+            <p class = "normal_text"> Average Rating:  {{average}} <ion-icon name="star" class = "star"></ion-icon></p>   
+        </div>
+        <div>
+            <p class = "normal_text"> Number of Likes:  {{likes}} <ion-icon name="heart" class = "heart"></ion-icon></p>   
+        </div>
+        <div>
+            <form action = "./book_info" method = "POST" name = "form" value = "form1">
+                <button type="submit" class="add_like" name = "add_like" value="{{id}}a">
+                    <ion-icon name="heart" class = "add_heart"></ion-icon>
+                    <div class = "child2">Click to Add Like</div>
+                </button>
+            </form>
+        </div>
+    </div> 
+    <div class="info">
+        <div class="normal_text title">
+            <p>Title: {{title}}</p>
+        </div>
+        <div class="normal_text title up">
+            <p>Rating Given: {{rating}} Stars</p>
+        </div>
+        <div class="content">
+            <div class="normal_text small">
+                <p>Author: {{author}}</p>
+            </div>
+
+            <div class="normal_text small left">
+                <p>Pages: {{pages}}</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="normal_text small">
+                <p>Genre: {{genre}}</p>
+            </div>
+
+            <div class="normal_text small left">
+                <p>Grade Level: {{grade}}/12</p>
+            </div>
+        </div>
+        <div class = "normal_text large">
+            <p>Description</p>
+            <p style="text-align:left">{{description}}</p>
+        </div>
+        <div class="all_comments">
+            {% for item in range(0, length) %}
+                <div>
+                    <p class="normal_text indcomment">Comment By {{names[item]}}: <br><br>  {{comments[item]}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</div>
+
+<form action = "./book_info" method = "POST" name="form" value = "form2">
+    <button type="submit" class="add_comment" name = "add_like" value="{{id}}">
+        Add Comment
+    </button>
+</form>
+
+ 
+{% endblock %}

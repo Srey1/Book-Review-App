@@ -1,0 +1,25 @@
+<!-- HTML Page for a User to see their Book History -->
+{% extends "sidebar_temp.html"%}
+{% block title %}
+<title>Book Reviews</title>
+<link rel="stylesheet" href="static/styles/sidebar.css" type="text/css">
+<link rel="stylesheet" href="static/styles/history.css" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+<div class="all">
+    {% for item in range(0, length) %}
+    <div class="one">
+        <img src = "{{pictures[item]}}" class = "size">
+        <p class = "info">Title: {{titles[item]}}</p>
+        <p class = "info">Your Rating: {{ratings[item]}} Stars</p>
+        <form method = "POST" action = "./history" class = "the_form">
+            <button class="button_style" value = "{{ids[item]}}" name = "id">
+                DELETE
+            </button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

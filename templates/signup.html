@@ -1,0 +1,29 @@
+<!-- HTML Page for Signup -->
+{% extends "layout.html"%}
+{% block title %}
+<title>Book Reviews</title>
+<link rel="stylesheet" href="static/styles/sign_up.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <form class = "login-form" action = "./signup" method = "POST">
+        <div class="login-form__login-container"> 
+            <img class = "login-form__logo" src = "/static/Blue Simple Modern Square Logo Design.png", alt = "Book Ratings Logo">
+        </div>
+
+        <div class = "login-context">
+            <div class="login-header"> <h2><b>Create an Account!</b></h2></div>
+            <from action = "/main" method = "get">
+                <input class="login-input" type="text" name="username" placeholder="Email">
+                <input class="login-input" type="text" name="email" placeholder="Username">
+                <input class="login-input" type="password" name="password" placeholder="Password">
+                <input class="login-input" type="password" name="check_password" placeholder="Confirm Password">
+                <button type="submit" class="login-button">Sign Up</button>
+            </from>
+            <p> </p>
+            <a href=" {{ url_for('index') }} " class="text">Already have an account? Login!</a>
+        </div>
+
+
+    </form>
+{% endblock %}
